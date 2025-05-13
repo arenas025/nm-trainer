@@ -4,35 +4,51 @@ import "./global.css";
 
 <div
   style="font-family: 'Bebas Neue', sans-serif;"
-  class="hero bebas-neue-regular h-screen flex justify-between items-center"
+  class="hero bebas-neue-regular min-h-screen flex flex-col lg:flex-row justify-between items-center px-4 lg:px-0 relative"
 >
-  <div class="w-[55%] h-[90%] justify-between flex flex-col pl-[100px]">
+  <div class="lg:hidden absolute inset-0 w-full h-full">
+    <img class="w-full h-full object-cover" src="/profile-banner.png" />
+    <div class="absolute inset-0 bg-white/80"></div>
+  </div>
+
+  <div
+    class="w-full m-auto lg:m-0 lg:w-[55%] h-full lg:h-[90%] justify-between flex flex-col lg:pl-[100px] py-8 lg:py-0 relative z-10"
+  >
     <div class="flex flex-col gap-4">
-      <h1 class="xl:leading-[150px] leading-[65px] xl:text-[120px] text-[75px]">
+      <h1
+        class="text-[45px] sm:text-[65px] lg:text-[75px] xl:text-[120px] leading-[55px] sm:leading-[65px] xl:leading-[150px] text-center lg:text-left"
+      >
         DA EL PRIMER PASO HOY Y DESCUBRE DE LO QUE ERES CAPAZ
       </h1>
       <h2
-        class="xl:text-3xl text-2xl xl:leading-[40px] leading-[25px] uppercase text-[#898989]"
+        class="text-lg sm:text-xl xl:text-3xl leading-[25px] xl:leading-[40px] uppercase text-[#898989]"
       >
         Con un plan de entrenamiento personalizado, trabajamos juntas para
-        alcanzar tus objetivos. Cada sesión está diseñada para ti, para que
-        progreses y avances de manera segura y efectiva
+        alcanzar tus objetivos. <br class="lg:hidden block" />
+        <b class="text-black">Cada sesión está diseñada para ti</b>
       </h2>
     </div>
-    <div class="flex flex-col items-center gap-4">
-      <h3 class="xl:text-4xl text-2xl uppercase text-black">
+    <div class="flex flex-col items-center gap-2 mt-10">
+      <h3
+        class="text-2xl sm:text-3xl xl:text-4xl uppercase text-black text-center"
+      >
         ¿estás lista para transformar tu cuerpo y tu mente?
       </h3>
       <a
         href="https://wa.me/573222701924?text=Hola,%20me%20gustaria%20conocer%20sobre%20los%20planes%20de%20entrenamiento%20personalizado%20y%20me%20gustaria%20recibir%20m%C3%A1s%20informaci%C3%B3n.%20%C2%BFPodr%C3%ADan%20ayudarme%3F"
+        class="w-full sm:w-auto"
       >
         <button
-          class="bg-[#F47AC4] xl:text-4xl p-10 text-2xl cursor-pointer rounded-[10px] px-6 py-4"
+          class="bg-[#F47AC4] text-xl sm:text-2xl xl:text-4xl w-full sm:w-auto cursor-pointer rounded-[10px] px-6 py-4"
         >
           <p class="text-white">ENTRENA CONMIGO</p>
         </button>
       </a>
     </div>
   </div>
-  <img class="h-[90%] object-cover" src="/profile-banner.png" />
+
+  <img
+    class="hidden lg:block lg:w-auto lg:h-[90%] object-cover"
+    src="/profile-banner.png"
+  />
 </div>
