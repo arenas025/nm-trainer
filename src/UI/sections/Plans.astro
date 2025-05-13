@@ -1,0 +1,188 @@
+---
+import CardsPlan from "../components/CardsPlan";
+
+const plans = [
+  {
+    title: "Entrenamiento virtual",
+    highlightedTitle: "básico",
+    descriptions: [
+      {
+        title: "Planeación de entrenamiento mensual",
+        description:
+          "Desde casa o cualquier gimnasio, adaptada a tu tiempo, capacidades y objetivos.",
+      },
+      {
+        title: "Asesoría nutricional",
+        description:
+          "Según tus objetivos, priorizando no solo macros, sino la mejor estrategia para tu organismo.",
+      },
+      {
+        title: "Chequeo mensual",
+        description:
+          "A través de fotografías y retroalimentación sobre los avances de tu proceso.",
+      },
+    ],
+    plans: [
+      {
+        title: "Mensual",
+        price: "200.000 COP",
+      },
+      {
+        title: "Trimestral",
+        price: "480.000 COP",
+      },
+      {
+        title: "Semestral",
+        price: "840.000 COP",
+      },
+    ],
+  },
+  {
+    title: "Entrenamiento virtual",
+    highlightedTitle: "VIP",
+    descriptions: [
+      {
+        title: "Planeación de entrenamiento mensual",
+        description:
+          "Desde casa o cualquier gimnasio, adaptada a tu tiempo, capacidades y objetivos.",
+      },
+      {
+        title: "Asesoría nutricional",
+        description:
+          "Según tus objetivos, priorizando no solo macros, sino la mejor estrategia para tu organismo.",
+      },
+      {
+        title: "Chequeo mensual",
+        description:
+          "A través de fotografías y retroalimentación sobre los avances de tu proceso.",
+      },
+      {
+        title: "Entrenamiento en vivo",
+        description:
+          "Sesión online para corregir técnica, resolver dudas y revisar la planeación.",
+      },
+      {
+        title: "Chequeo escolar",
+        description:
+          "Reunión en vivo para explicar la planeación, dudas alimenticias y ajustes necesarios.",
+      },
+    ],
+    plans: [
+      {
+        title: "Mensual",
+        price: "250.000 COP",
+      },
+      {
+        title: "Trimestral",
+        price: "590.000 COP",
+      },
+      {
+        title: "Semestral",
+        price: "999.000 COP",
+      },
+    ],
+  },
+  {
+    title: "Asesorías",
+    highlightedTitle: "Semi-personalizadas",
+    descriptions: [
+      {
+        title: "Planeación de entrenamiento mensual",
+        description:
+          "Presencial en Smartfit Multicentro Ibagué, con horario establecido y adaptada a tus objetivos.",
+      },
+      {
+        title: "Asesoría nutricional",
+        description:
+          "Según tus objetivos, priorizando no solo macros, sino la mejor estrategia para tu organismo.",
+      },
+      {
+        title: "Chequeo mensual",
+        description:
+          "Con fotografías, medidas antropométricas y retroalimentación del progreso.",
+      },
+      {
+        title: "Entrenamiento presencial compartido",
+        description:
+          "En grupo reducido (máximo 3 personas), con procesos individualizados y percepción de esfuerzo adecuada.",
+      },
+    ],
+    plans: [
+      {
+        title: "3 días a la semana",
+        price: "383.250 COP",
+      },
+      {
+        title: "4 días a la semana",
+        price: "438.000 COP",
+      },
+      {
+        title: "5 días a la semana",
+        price: "492.750 COP",
+      },
+    ],
+  },
+  {
+    title: "Asesorías",
+    highlightedTitle: "Personalizadas",
+    descriptions: [
+      {
+        title: "Planeación de entrenamiento mensual",
+        description:
+          "Presencial en Smartfit Multicentro Ibagué, con horario establecido y adaptada a tus objetivos.",
+      },
+      {
+        title: "Asesoría nutricional",
+        description:
+          "Según tus objetivos, priorizando no solo macros, sino la mejor estrategia para tu organismo.",
+      },
+      {
+        title: "Chequeo mensual",
+        description:
+          "Con fotografías, medidas antropométricas y retroalimentación del progreso.",
+      },
+      {
+        title: "Entrenamiento 100% personalizado",
+        description:
+          "Sesiones presenciales uno a uno, con acompañamiento completo durante todo el entrenamiento.",
+      },
+    ],
+    plans: [
+      {
+        title: "3 días a la semana",
+        price: "547.500 COP",
+      },
+      {
+        title: "4 días a la semana",
+        price: "657.000 COP",
+      },
+      {
+        title: "5 días a la semana",
+        price: "766.500 COP",
+      },
+    ],
+  },
+];
+---
+
+<section id="planes" class="p-4 mb-[100px]">
+  <h1
+    style="font-family: 'Bebas Neue', sans-serif;"
+    class="text-4xl font-bold text-center my-10"
+  >
+    Planes
+  </h1>
+  <div class="flex flex-col gap-6">
+    {
+      plans.map((plan) => (
+        <CardsPlan
+          client:only="react"
+          title={plan.title}
+          highlightedTitle={plan.highlightedTitle}
+          plans={plan.plans}
+          description={plan.descriptions}
+        />
+      ))
+    }
+  </div>
+</section>
