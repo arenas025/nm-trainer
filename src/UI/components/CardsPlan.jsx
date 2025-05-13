@@ -2,14 +2,14 @@ import { useState } from "react";
 import { colors } from "../../utils/constants";
 
 export const CardsPlan = ({ title, highlightedTitle, description, plans }) => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleCard = () => {
     setIsExpanded(!isExpanded);
   };
 
   return (
-    <div className="flex flex-col shadow-lg py-4">
+    <div className="flex flex-col shadow-lg ">
       <div className="w-full bg-black">
         <h3
           style={{ fontFamily: "Bebas Neue, sans-serif" }}
@@ -41,7 +41,7 @@ export const CardsPlan = ({ title, highlightedTitle, description, plans }) => {
         </button>
       </div>
       {isExpanded && (
-        <div className="mt-10 px-2">
+        <div className="mt-10 px-2 pb-5">
           <h4
             style={{ fontFamily: "Bebas Neue, sans-serif" }}
             className="text-2xl font-bold"
@@ -66,7 +66,7 @@ export const CardsPlan = ({ title, highlightedTitle, description, plans }) => {
               </div>
             ))}
           </div>
-          <div className="flex mt-4 items-center justify-center gap-6">
+          <div className="flex mt-6 items-center justify-center gap-6">
             {plans.map((plan) => (
               <a href={plan.link} className="text-sm">
                 <div
