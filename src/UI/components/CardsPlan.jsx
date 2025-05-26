@@ -30,7 +30,7 @@ export const CardsPlan = ({ title, highlightedTitle, description, plans }) => {
         />
         <button
           onClick={toggleCard}
-          className="absolute left-1/2 -translate-x-1/2 -bottom-[15px] bg-[#F47AC4]  px-[30px] py-[10px] flex items-center justify-center"
+          className="absolute left-1/2 rounded-sm -translate-x-1/2 -bottom-[15px] bg-[#F47AC4]  px-[30px] py-[10px] flex items-center justify-center"
         >
           <h4
             style={{ fontFamily: "Bebas Neue, sans-serif" }}

@@ -1,0 +1,23 @@
+---
+import { colors } from "../../utils/constants";
+import TestimonialCard from "../components/TestimonialCard.astro";
+---
+
+<section class="py-5">
+  <h1
+    style={{ fontFamily: "Bebas Neue, sans-serif" }}
+    class="text-4xl text-center font-bold"
+  >
+    Testimonios
+  </h1>
+  <p style={{ fontFamily: "Montserrat, sans-serif" }} class="text-center">
+    Descubre cómo mis entrenamientos han transformado la vida de mis asesorados.
+    <br />
+    <span style={{ color: colors.primary_pink }}>
+      ¡Tú también puedes lograrlo!
+    </span>
+  </p>
+  <div class="flex items-center mt-5 w-full justify-center">
+    <TestimonialCard />
+  </div>
+</section>
